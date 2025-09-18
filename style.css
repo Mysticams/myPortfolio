@@ -1,0 +1,332 @@
+:root {
+    --primary: #bbf7d0;
+    --secondary: #f9a8d4;
+    --light: #ffffff;
+    --lighter: #fefefe;
+    --dark: #1f2937;
+    --gray: #6b7280;
+    --accent: #f0fdf4;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: var(--primary);
+    color: var(--dark);
+    line-height: 1.6;
+}
+
+/* Navigation */
+.navbar {
+    background: #EA738D !important;
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(187, 247, 208, 0.3);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
+}
+
+.navbar-brand {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+.nav-link {
+    color: var(--dark) !important;
+    font-weight: 500;
+    margin: 0 0.5rem;
+    padding: 0.5rem 1rem !important;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    background: var(--primary);
+    color: var(--dark) !important;
+}
+
+/* Hero Section */
+.hero {
+    min-height: 100vh;
+    background: var(--accent);
+    display: flex;
+    align-items: center;
+    padding: 120px 0 80px;
+    background-color: #89ABE3;
+}
+
+.hero-title {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: clamp(2rem, 6vw, 4rem);
+    font-weight: 800;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.gradient-text {
+    color: var(--light);
+}
+
+.typewriter {
+    border-right: 3px solid var(--primary);
+    padding-right: 8px;
+    animation: blink 1.5s infinite;
+}
+
+@keyframes blink {
+
+    0%,
+    50% {
+        border-color: var(--primary);
+    }
+
+    51%,
+    100% {
+        border-color: transparent;
+    }
+}
+
+.btn-custom {
+    background: var(--secondary);
+    border: none;
+    color: white;
+    padding: 0.875rem 2rem;
+    border-radius: 12px;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+    margin: 0.5rem;
+}
+
+.btn-custom:hover {
+    background: var(--primary);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(187, 247, 208, 0.4);
+    color: var(--dark);
+}
+
+.btn-outline {
+    background: transparent;
+    border: 2px solid var(--secondary);
+    color: var(--secondary);
+}
+
+.btn-outline:hover {
+    background: var(--primary);
+    border-color: var(--primary);
+    color: var(--dark);
+}
+
+/* ID Card */
+.id-card {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    min-height: 520px;
+    background: var(--primary);
+    border-radius: 25px;
+    box-shadow: 0 25px 80px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    position: relative;
+    border: 1px solid rgba(187, 247, 208, 0.3);
+    margin: 0 auto;
+    text-align: center;
+}
+
+.id-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
+    background: var(--secondary);
+    border-radius: 25px 25px 0 0;
+}
+
+.id-photo,
+.about-photo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 4px solid var(--secondary);
+    margin: 0 auto 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.id-photo img,
+.about-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.id-details {
+    background: var(--secondary);
+    border-radius: 15px;
+    padding: 1rem;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    border: 1px solid rgba(187, 247, 208, 0.3);
+}
+
+/* Sections */
+.section {
+    padding: 80px 0;
+    background: #89ABE3;
+    ;
+}
+
+.section:nth-of-type(even) {
+    background: var(--secondary);
+}
+
+.section-alt {
+    background: #f9f9f9;
+}
+
+.section-title {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    text-align: center;
+    margin-bottom: 3rem;
+    font-weight: 700;
+}
+
+/* Tabs Buttons */
+.nav-pills .nav-link {
+    font-weight: 600;
+    color: #555;
+    padding: 10px 25px;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .nav-link:hover {
+    color: #fff;
+    background: linear-gradient(90deg, #ff7eb3, #ff758c);
+    box-shadow: 0 5px 15px rgba(255, 117, 140, 0.3);
+}
+
+/* Card Styling */
+.card-custom {
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: none;
+    background: var(--primary);
+    border-radius: 15px;
+}
+
+.card-custom:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.project-image {
+    height: 200px;
+    background: var(--secondary);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    color: white;
+    margin-bottom: 1.5rem;
+}
+
+.project-link {
+    color: var(--secondary);
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.project-link:hover {
+    color: var(--primary);
+    transform: translateX(5px);
+}
+
+/* Skills */
+.skill-icon {
+    width: 60px;
+    height: 60px;
+    background: var(--secondary);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+    font-size: 1.5rem;
+    color: white;
+}
+
+/* Social Links */
+.social-link {
+    width: 60px;
+    height: 60px;
+    background: var(--primary);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--dark);
+    text-decoration: none;
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+    margin: 0.5rem;
+}
+
+.social-link:hover {
+    transform: translateY(-5px);
+    background: var(--secondary);
+    box-shadow: 0 15px 40px rgba(249, 168, 212, 0.3);
+    color: white;
+}
+
+
+@media (max-width: 768px) {
+    .hero {
+        padding: 100px 0 60px;
+        text-align: center;
+    }
+
+    .section {
+        padding: 60px 0;
+    }
+
+    .id-card {
+        max-width: 300px;
+        min-height: 400px;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero {
+        padding: 80px 0 40px;
+    }
+
+    .section {
+        padding: 40px 0;
+    }
+
+    .id-card {
+        max-width: 280px;
+        min-height: 380px;
+        padding: 1.5rem;
+    }
+}
