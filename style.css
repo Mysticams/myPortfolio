@@ -141,17 +141,6 @@ body {
     text-align: center;
 }
 
-.id-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 80px;
-    background: var(--secondary);
-    border-radius: 25px 25px 0 0;
-}
-
 .id-photo,
 .about-photo {
     width: 120px;
@@ -295,9 +284,8 @@ body {
     transform: translateY(-5px);
     background: var(--secondary);
     box-shadow: 0 15px 40px rgba(249, 168, 212, 0.3);
-    color: white;
+    color: rgb(255, 255, 255);
 }
-
 
 @media (max-width: 768px) {
     .hero {
